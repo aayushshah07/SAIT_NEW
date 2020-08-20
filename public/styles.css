@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+ 
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -27,7 +28,37 @@ a img{
   background-color: #6ab344;
   color: #fff;
 }
+.column {
+  /* float: right; */
+  width: 43%;
+   padding-right:20px; 
+   border: 2px solid black;
+   position: relative;
+  }
 
+  .row{
+  content: "";
+  /* display: table; */
+  display: flex; 
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 10px;
+  flex-wrap: wrap;
+  }
+
+  
+
+  .fa-color
+  {
+    color: white;
+    
+  }
+  
+  
+.colomn-para
+{
+  padding-top: 10px;
+}
 ::selection {
   background-color: #6ab344;
   color: #fff;
@@ -206,6 +237,14 @@ a img{
   position: absolute;
 }
 
+.aboutClass
+{
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  /* position: absolute; */
+  z-index: 1;
+}
 .android-sub-slogan {
   font-size: 21px;
    padding-top: 30px; 
@@ -218,19 +257,30 @@ a img{
 .android-create-character {
   font-size: 21px;
   padding-top: 400px;
+  background: black;
 }
 
   .android-create-character a {
     text-decoration: none;
     color: #767777;
     font-weight: 300;
+
+    /* background: black; */
   }
 
 .android-screen-section {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 80px;
+   padding-top: 60px;
+  /* padding-bottom: 80px; */
+   
+}
+.aboutText
+{
+  font-size: 15px;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   
+  padding: 20px;
+  color: white;
 }
 
 .android-screens {
@@ -238,14 +288,16 @@ a img{
   width: 100%;
   white-space: nowrap;
   overflow-x: auto;
+  /* background:white; */
 }
 
 .android-screen {
   text-align: center;
+  
 }
 
 .android-screen .android-link {
-  margin-top: 16px;
+   margin-top: 16px; 
   display: block;
   z-index: 2;
 }
@@ -322,9 +374,10 @@ a img{
 
 .android-wear-section {
   position: relative;
-  background: url('images/wear.png') center top no-repeat;
+  /* background: url('images/wear.png') center top no-repeat; */
   background-size: cover;
   height: 800px;
+  /* background:black; */
 }
 
 .android-wear-band {
@@ -536,6 +589,7 @@ a img{
     font-size: 16px;
     margin: 150px 16px;
     padding-top: 8px;
+    text-align: center;
   }
 
   .android-create-character {
@@ -551,12 +605,39 @@ a img{
     display: none;
   }
 
-  .android-wear-band-text {
+  /* .android-wear-band-text {
     margin-left: 0;
     padding: 16px;
-  }
+  } */
 
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+  /* #about
+  {
+    display: none;
+  } */
+  .android-be-together-section
+    {
+    height: 100vh;
+  
+  }
+  /* .mdl-layout__content
+  {
+    height: 100vh;
+  } */
+
+  .android-slogan
+  {
+      margin: 100px;
+  }
+  .android-sub-slogan
+  {
+    margin-top: 250px ;
+    padding-top: 20px;
+  }
+   .column,.aboutText{
+    margin:0;
+    width: 100%;
+  } 
 }
