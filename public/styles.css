@@ -13,13 +13,52 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+ /* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
 body {
   margin: 0;
- 
+ overflow-x: hidden;
 }
 
-/* Disable ugly boxes around images in IE10 */
+
+
+.fade-in
+{
+  opacity: 0;
+  transition: opacity 350ms ease-in;
+}
+
+.appear
+{
+  opacity: 1;
+}
+.from-left
+{
+  transform: translateX(-50%);
+}
+
+
+.from-right
+{
+  transform: translateX(50%);
+}
+.from-left,.from-right
+{
+  transition:opacity 350ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+.from-left.appear,.from-right.appear
+{
+  transform: translateX(0);
+  opacity: 1;
+}
+
 a img{
   border: 0px;
 }
@@ -32,25 +71,161 @@ a img{
   /* float: right; */
   width: 43%;
    padding-right:20px; 
-   border: 2px solid black;
+   /* border: 2px solid red; */
    position: relative;
   }
 
   .row{
   content: "";
-  /* display: table; */
+  display: table;
   display: flex; 
    flex-direction: row;
    justify-content: space-around;
    padding: 10px;
   flex-wrap: wrap;
+  /* border: 2px solid green; */
+  /* overflow: hidden; */
+  height: 0%;
+
   }
 
+  .counter-column {
+      width: 80%;
+     padding-right:20px; 
+     border: 2px solid red;
+     position: relative;
+     height: 1000px;
+     align-content: center;
+    
+    }
   
+    .counter-row{
+    /* content: ""; */
+      display: flex; 
+     flex-direction: row;
+     justify-content: space-around;
+     padding: 10px;
+    flex-wrap: wrap;
+    /* border: 2px solid blueviolet; */
+    padding-top: 100px;
+    align-items: center;
+    }
+  .counter
+  {
+    align-content: center;
+  }
+  #num
+  {
+    align-content:center;
+    /* padding-left: 50px; */
+    padding-top: 30px;
+    padding-right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 50px;
+
+  }
+  .counter-section
+  {
+      margin: 10% auto;
+      color:white;
+  }
+  
+  .icon-box
+  {
+      border: 2px solid yellow;
+      height: 100px;
+      width: 100px;
+      margin: 25px auto;
+      transform: rotate(45deg);
+      align-content: center;
+  }
+  .icon-box .fa
+  {
+      font-size:40px;
+      margin:20px auto;
+      transform: rotate(-45deg);
+      padding-right: 30px;
+  }
+  
+  .counter-box p
+  {
+      font-size:40px;
+      padding-top: 15px;
+  }
+  /* .maindiv
+  {
+      background: #00bfa5;
+      width: 70%;
+      height: 400px;
+      position: absolute; 
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      background-image: url('https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+      background-size: 100% 100%;
+      box-shadow: 1px 2px 10px 3px white;
+      animation : slider 9s infinite linear;
+  } */
+  .slider{
+    width:100%;
+    height: 500px;
+    position: relative;
+    padding-top: 50px;
+  }
+  .image{
+    width:100%;
+    height:500px;
+    animation: smooth 1.5s linear;
+    transition-duration: 300ms;
+    padding: 10px 10px;
+  }
+  .image img{
+    width:100%;
+    height:400px;
+  }
+  .left, .right{
+    position:absolute;
+    font-size: 40px;
+    top:50%;
+    color:white;
+    background-color:transparent ;
+    transition:0.5s;
+    padding:4px;
+    display:none;
+    border-radius: 50%;
+
+  }
+  .right{
+    right:0;
+  }
+  .left:hover, .right:hover{
+    cursor:pointer;
+    font-size: 42px;
+    top:50%;
+    bottom: 50%;
+    color:greenyellow;
+     
+  }
+  .slider:hover > .left, .slider:hover > .right{
+    display:block;
+  }
+
+  @keyframes smooth {
+    from{
+      transform: scale(0.9);
+      opacity:0.8;
+    }
+    to{
+      transform: scale(1); 
+      opacity: 1;
+    }
+  }
+
 
   .fa-color
   {
-    color: white;
+    color:limegreen;
     
   }
   
@@ -171,7 +346,6 @@ a img{
             order: 3;
   }
 
-
 .android-drawer {
   border-right: none;
 }
@@ -242,8 +416,6 @@ a img{
   font-size: 40px;
   font-weight: 400;
   color: white;
-  /* position: absolute; */
-  z-index: 1;
 }
 .android-sub-slogan {
   font-size: 21px;
@@ -270,8 +442,9 @@ a img{
 
 .android-screen-section {
   position: relative;
-   padding-top: 60px;
-  /* padding-bottom: 80px; */
+   padding-top: 30px;
+  padding-bottom: 20px;
+  background: black;
    
 }
 .aboutText
@@ -283,31 +456,37 @@ a img{
   color: white;
 }
 
-.android-screens {
+.android-screening {
   text-align: right;
   width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
-  /* background:white; */
+  margin-top:10px;
+  /* /* white-space: nowrap; */
+  /* overflow-x: hidden;  */
+ /* background-image: linear-gradient(rgba(49,0,255,0.8),rgba(132,5,29,0.8),url(public/images/wear.png)); 
+  background-size: cover;
+ background-position: center;   */
+  background:black;
+  
 }
 
 .android-screen {
   text-align: center;
+  background:wheat;
   
 }
 
-.android-screen .android-link {
+/* .android-screen .android-link {
    margin-top: 16px; 
   display: block;
   z-index: 2;
-}
+} */
 
 .android-image-link {
   text-decoration: none;
 }
 
 .android-wear {
-  display: inline-block;
+  /* display: inline-block; */
   width: 160px;
   margin-right: 32px;
 }
@@ -318,11 +497,11 @@ a img{
   }
 
 
-.android-phone {
+/* .android-phone {
   display: inline-block;
   width: 64px;
   margin-right: 48px;
-}
+} */
 
   .android-phone .android-screen-image {
     width: 100%;
@@ -330,28 +509,28 @@ a img{
   }
 
 
-.android-tablet {
+/* .android-tablet {
   display: inline-block;
   width: 110px;
   margin-right: 64px;
-}
+} */
 
   .android-tablet .android-screen-image {
     width: 100%;
     z-index: 1;
   }
 
-  .android-tablet .android-link {
+  /* .android-tablet .android-link {
     display: block;
     z-index: 2;
-  }
+  } */
 
 
-.android-tv {
+/* .android-tv {
   display: inline-block;
   width: 300px;
   margin-right: 80px;
-}
+} */
 
   .android-tv .android-screen-image {
     width: 100%;
@@ -359,25 +538,28 @@ a img{
   }
 
 
-.android-auto {
+/* .android-auto {
   display: inline-block;
   width: 300px;
   overflow: hidden;
-}
+} */
 
-  .android-auto .android-screen-image {
+  /* .android-auto .android-screen-image {
     display: block;
     height: 300px;
     z-index: 1;
   }
-
+ */
 
 .android-wear-section {
   position: relative;
-  /* background: url('images/wear.png') center top no-repeat; */
-  background-size: cover;
-  height: 800px;
-  /* background:black; */
+  /* background: url('images/wear.png') center top no-repeat;  */
+  background-size: cover; 
+  height: 630px;
+  background:black;
+  padding-top:10px;
+  width: 100%;
+  
 }
 
 .android-wear-band {
@@ -528,7 +710,7 @@ a img{
 
   .android-footer .mdl-mega-footer--right-section a .material-icons {
     position: relative;
-    top: 6px;
+    top: 106px;
   }
 
 
@@ -538,7 +720,7 @@ a img{
 
 
 /**** Mobile layout ****/
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .android-navigation-container {
     display: none;
   }
@@ -547,13 +729,13 @@ a img{
     display: none !important;
   }
 
-  .android-mobile-title {
+  /* .android-mobile-title {
     display: block !important;
     position: absolute;
     left: calc(50% - 70px);
     top: 0px;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  } */
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
@@ -640,4 +822,12 @@ a img{
     margin:0;
     width: 100%;
   } 
+  .counter-row
+  {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  
+  
 }
