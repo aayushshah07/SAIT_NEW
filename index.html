@@ -50,17 +50,17 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-  <style>
-      #view-source {
-        position: fixed;
-        display: block;
-        right: 0;
-        bottom: 0;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        z-index: 900;
-      }
-      </style>
+  <!-- <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style> -->
 </head>
 
 <body>
@@ -111,7 +111,7 @@
         <a class="mdl-navigation__link" href="">Home</a>
         <a class="mdl-navigation__link" href="#about">About</a>
         <a class="mdl-navigation__link" href="#event">Event</a>
-        <a class="mdl-navigation__link" href="">Gallery</a>
+        <a class="mdl-navigation__link" href="#contact">Gallery</a>
         <a class="mdl-navigation__link" href=""></a>
         <a class="mdl-navigation__link" href="">One</a>
         <a class="mdl-navigation__link" href="">Play</a>
@@ -251,65 +251,98 @@
         </div>
       </div>
       <div class="android-wear-section" id="event">
-          <div class="image-slider fade-in">
-              <h2 class="logo-font aboutClass text-center">EVENTS</h2>
-              <div class="slider">
-                <div class="image">
-                  <img src="https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-        
-                </div>
-                <div class="image">
-                  <img src="https://images.unsplash.com/photo-1564435150-149bb1667a60?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-        
-                </div>
-                <div class="image">
-                  <img src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-        
-                </div>
-                <div class="image">
-                  <img src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-        
-                </div>
-                <div class="left" onclick="manualSlide(-1)"> < </div>
-                <div class="right" onclick="manualSlide(1)"> > </div>
-        
-              </div>
-        
+        <div class="image-slider fade-in">
+          <div class="logo-font aboutClass text-center fade-in">Our Events</div>
+          <div class="slider">
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="">
+
             </div>
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1564435150-149bb1667a60?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="">
+
+            </div>
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="">
+
+            </div>
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="">
+
+            </div>
+            <div class="left" onclick="manualSlide(-1)">
+              < </div> <div class="right" onclick="manualSlide(1)"> >
+            </div>
+
+          </div>
+
+        </div>
       </div>
-      <!-- <div class="counterrow"> -->
-
-      <!-- <div class="counter-coloumn">
-            <i class="fa fa-users fa-3x " style="font-size: 10em"></i>
-            <span class="num">300</span>
-
-          </div> -->
-
-
-      <!-- <div class="counter-coloumn">
-            <i class="fa fa-users fa-3x " style="font-size: 10em"></i>
-
-            <span class="num">300</span>
-          </div> -->
-      <!-- </div> -->
-
-      <!-- </div> -->
-      <!-- <div class="android-wear-band"> -->
-      <!-- <div class="android-wear-band-text">
-            <div class="mdl-typography--display-2 mdl-typography--font-thin">The best of Google built in</div>
-            <p class="mdl-typography--headline mdl-typography--font-thin">
-              Android works perfectly with your favourite apps like Google Maps,
-              Calendar and YouTube.
-            </p>
-            <p>
-              <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
-                See what's new in the Play Store&nbsp;<i class="material-icons">chevron_right</i>
-              </a>
-            </p>
-          </div> -->
-
-      <!-- </div> -->
+        
+  <footer>
+      <div class="main-content" id="contact">
+        <div class="lt side">
+            <h2 class="fade-in">About Walchand</h2>
+            <p class="aboutText fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid eius fugiat quae autem quod totam ut vel pariatur perspiciatis!</p>
+        </div>
+        <div class="ct side">
+          <h2 class="fade-in">Address</h2>
+          
+          <div class="content">
+            <div class="place">
+              <span class="fa fa-map-marker fa-color fade-in"></span>
+              <span class="aboutText fade-in">Sangli,Maharashtra</span>
+            </div>
+            <div class="phone">
+              <span class="fa fa-phone fa-color fade-in"></span>
+              <span class="aboutText fade-in">+91 123456789</span>
+            </div>
+            <div class="email">
+              <span class="fa fa-envelope fa-color fade-in"></span>
+              <span class="aboutText fade-in">@wce.sangli</span>
+            </div>
+            <div class="social">
+              <a href="#"><span  class="fa fa-facebook-official fade-in"></span></a>
+              <a href="#"><span class="fa fa-instagram fade-in"></span></a>
+              <a href="#"><span class="fa fa-twitter fade-in"></span></a>
+              <a href="#"><span class="fa fa-youtube-play fade-in"></span></a>
+              <!-- <a href="#"><span class="fab fa-facebook-f"></span></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="rt side">
+          <h2>Contact Us</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="aboutText fade-in">Email *</div>
+                <input type="email fade-in" required>
+              </div>
+              <div class="msg">
+                <div class="aboutText">Message *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                  <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+  
+          </div>
+        </div>
+      </div>
+      <div class="bottom aboutText text-center">Made In <span class="fa fa-heart fa-2x" style="color:rgb(227, 45, 45)"></span> with SAIT</div>
+    </footer>
+      
     </div>
+  
     <!--  <div class="android-customized-section">
         <div class="android-customized-section-text">
           <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you
@@ -364,7 +397,7 @@
             </div>
           </div> -->
 
-          <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
             <div class="mdl-card__media">
               <img src="images/more-from-2.png">
             </div>
@@ -384,7 +417,7 @@
             </div>
           </div> -->
 
-          <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
             <div class="mdl-card__media">
               <img src="images/more-from-3.png">
             </div>
@@ -403,10 +436,10 @@
               </a>
             </div>
           </div> -->
-        </div>
-      </div>
+  </div>
+  </div>
 
-    <footer class="android-footer mdl-mega-footer">
+  <!-- <footer class="android-footer mdl-mega-footer">
       <div class="mdl-mega-footer--top-section">
         <div class="mdl-mega-footer--left-section">
           <button class="mdl-mega-footer--social-btn"></button>
@@ -453,11 +486,12 @@
         <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
       </div>
 
-    </footer>
+    </footer> -->
+
+
   </div>
   </div>
-  <a href="http://www.walchandsangli.ac.in/" target="_blank"
-    id="view-source"
+  <a href="http://www.walchandsangli.ac.in/" target="_blank" id="view-source"
     class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">FeedBack</a>
 
 
@@ -474,6 +508,9 @@
   <script src="public/js/waypoints.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script src="public/js/jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="public/js/scroll.js"></script>
   <script>
     AOS.init({
       duration: 700,
@@ -519,38 +556,38 @@
       }
     });
     counting();
-</script>
-<script >
+  </script>
+  <script>
     var index = 0;
     var images;
     var time;
-  
+
     autoSlide();
-    function autoSlide(n){
+    function autoSlide(n) {
       images = document.getElementsByClassName('image');
-  
+
       for (var i = 0; i < images.length; i++) {
         images[i].style.display = "none";
       }
-  
-      if(index > images.length - 1){
+
+      if (index > images.length - 1) {
         index = 0;
       }
       images[index].style.display = "block";
       index++;
-  
+
       time = setTimeout(autoSlide, 4000);
     }
-  
-    function manualSlide(n){
+
+    function manualSlide(n) {
       clearTimeout(time);
       newIndex = index + n;
       autoSlide(newIndex);
     }
-  
-  
+
+
   </script>
-  
+
 </body>
 
 </html>
