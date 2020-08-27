@@ -35,6 +35,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="public/styles.css">
   <link rel="stylesheet" href="public/animate.css">
+  <link rel="icon" href="public/images/AAYUSH -.png" sizes="32X32" type="image/png">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -50,7 +51,9 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-  <!-- <style>
+
+
+  <style>
     #view-source {
       position: fixed;
       display: block;
@@ -60,7 +63,7 @@
       margin-bottom: 40px;
       z-index: 900;
     }
-  </style> -->
+  </style>
 </head>
 
 <body>
@@ -115,7 +118,7 @@
         <a class="mdl-navigation__link" href=""></a>
         <a class="mdl-navigation__link" href="">One</a>
         <a class="mdl-navigation__link" href="">Play</a>
-        <div class="android-drawer-separator"></div>
+        <!-- <div class="android-drawer-separator"></div>
         <span class="mdl-navigation__link" href="">Versions</span>
         <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
         <a class="mdl-navigation__link" href="">KitKat 4.4</a>
@@ -131,7 +134,7 @@
         <a class="mdl-navigation__link" href="">App developer resources</a>
         <a class="mdl-navigation__link" href="">Android Open Source Project</a>
         <a class="mdl-navigation__link" href="">Android SDK</a>
-      </nav>
+      </nav> -->
     </div>
 
     <div class="android-content mdl-layout__content">
@@ -217,133 +220,108 @@
               </div>
             </div>
           </div>
-          <!-- <div class="android-wear android-screen">
-              <a class="android-image-link" href="#about">
-                <img class="android-screen-image" src="public/images/wear-silver-on.png">
-                <img class="android-screen-image" src="public/images/wear-black-on.png">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android Wear</a>
-            </div>
-            <div class="android-phone android-screen">
-              <a class="android-image-link" href="">
-                <img class="android-screen-image" src="public/images/nexus6-on.jpg">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Phones</a>
-            </div>
-            <div class="android-tablet android-screen">
-              <a class="android-image-link" href="">
-                <img class="android-screen-image" src="public/images/nexus9-on.jpg">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Tablets</a>
-            </div>
-            <div class="android-tv android-screen">
-              <a class="android-image-link" href="">
-                <img class="android-screen-image" src="public/images/tv-on.jpg">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android TV</a>
-            </div>
-            <div class="android-auto android-screen">
-              <a class="android-image-link" href="">
-                <img class="android-screen-image" src="public/images/auto-on.jpg">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Coming Soon: Android Auto</a>
-            </div> -->
         </div>
       </div>
       <div class="android-wear-section" id="event">
-        <div class="image-slider fade-in">
-          <div class="logo-font aboutClass text-center fade-in">Our Events</div>
+        <div class="logo-font aboutClass text-center fade-in">Our Events</div>
+        <div class="image-slider">
           <div class="slider">
-            <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
 
-            </div>
-            <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1564435150-149bb1667a60?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
+              <div class="slide first">
+                <img
+                  src="https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+              </div>
 
-            </div>
-            <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
+              <div class="slide second">
+                <img
+                  src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+              </div>
 
-            </div>
-            <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
+              <div class="slide third">
+                <img
+                  src="https://images.unsplash.com/photo-1564918161064-178ee6405dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+              </div>
+              <!-- Automatic image navigation -->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
 
+              </div>
+              <!-- Manual navigation -->
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+              </div>
             </div>
-            <div class="left" onclick="manualSlide(-1)">
-              < </div> <div class="right" onclick="manualSlide(1)"> >
-            </div>
-
           </div>
-
         </div>
+
+        <footer>
+          <div class="main-content" id="contact">
+            <div class="lt side">
+              <h2 class="fade-in">About Walchand</h2>
+              <p class="aboutText fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid eius
+                fugiat quae autem quod totam ut vel pariatur perspiciatis!</p>
+              <span class="copyright"></span>
+            </div>
+            <div class="ct side">
+              <h2 class="fade-in">Address</h2>
+
+              <div class="content">
+                <div class="place">
+                  <span class="fa fa-map-marker fa-color fade-in"></span>
+                  <span class="aboutText fade-in">Sangli,Maharashtra</span>
+                </div>
+                <div class="phone">
+                  <span class="fa fa-phone fa-color fade-in"></span>
+                  <span class="aboutText fade-in">+91 123456789</span>
+                </div>
+                <div class="email">
+                  <span class="fa fa-envelope fa-color fade-in"></span>
+                  <span class="aboutText fade-in">@wce.sangli</span>
+                </div>
+                <div class="social">
+                  <a href="#"><span class="fa fa-facebook-official fade-in"></span></a>
+                  <a href="#"><span class="fa fa-instagram fade-in"></span></a>
+                  <a href="#"><span class="fa fa-linkedin-square fade-in"></span></a>
+                  <a href="#"><span class="fa fa-youtube-play fade-in"></span></a>
+                  <!-- <a href="#"><span class="fab fa-facebook-f"></span></a> -->
+                </div>
+              </div>
+            </div>
+            <div class="rt side">
+              <h2>Contact Us</h2>
+              <div class="content">
+                <form action="#">
+                  <div class="email">
+                    <div class="aboutText fade-in">Email *</div>
+                    <input type="email fade-in" required>
+                  </div>
+                  <div class="msg">
+                    <div class="aboutText">Message *</div>
+                    <textarea rows="2" cols="25" required></textarea>
+                  </div>
+                  <div class="btn">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+          <div class="bottom aboutText text-center">Made In <span class="fa fa-heart fa-2x"
+              style="color:rgb(227, 45, 45)"></span> with WCE</div>
+        </footer>
+
       </div>
-        
-  <footer>
-      <div class="main-content" id="contact">
-        <div class="lt side">
-            <h2 class="fade-in">About Walchand</h2>
-            <p class="aboutText fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid eius fugiat quae autem quod totam ut vel pariatur perspiciatis!</p>
-        </div>
-        <div class="ct side">
-          <h2 class="fade-in">Address</h2>
-          
-          <div class="content">
-            <div class="place">
-              <span class="fa fa-map-marker fa-color fade-in"></span>
-              <span class="aboutText fade-in">Sangli,Maharashtra</span>
-            </div>
-            <div class="phone">
-              <span class="fa fa-phone fa-color fade-in"></span>
-              <span class="aboutText fade-in">+91 123456789</span>
-            </div>
-            <div class="email">
-              <span class="fa fa-envelope fa-color fade-in"></span>
-              <span class="aboutText fade-in">@wce.sangli</span>
-            </div>
-            <div class="social">
-              <a href="#"><span  class="fa fa-facebook-official fade-in"></span></a>
-              <a href="#"><span class="fa fa-instagram fade-in"></span></a>
-              <a href="#"><span class="fa fa-twitter fade-in"></span></a>
-              <a href="#"><span class="fa fa-youtube-play fade-in"></span></a>
-              <!-- <a href="#"><span class="fab fa-facebook-f"></span></a> -->
-            </div>
-          </div>
-        </div>
-        <div class="rt side">
-          <h2>Contact Us</h2>
-          <div class="content">
-            <form action="#">
-              <div class="email">
-                <div class="aboutText fade-in">Email *</div>
-                <input type="email fade-in" required>
-              </div>
-              <div class="msg">
-                <div class="aboutText">Message *</div>
-                <textarea rows="2" cols="25" required></textarea>
-              </div>
-              <div class="btn">
-                  <button type="submit" class="btn btn-primary">Send</button>
-              </div>
-            </form>
-  
-          </div>
-        </div>
-      </div>
-      <div class="bottom aboutText text-center">Made In <span class="fa fa-heart fa-2x" style="color:rgb(227, 45, 45)"></span> with SAIT</div>
-    </footer>
-      
-    </div>
-  
-    <!--  <div class="android-customized-section">
+
+      <!--  <div class="android-customized-section">
         <div class="android-customized-section-text">
           <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you
           </div>
@@ -397,7 +375,7 @@
             </div>
           </div> -->
 
-    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
             <div class="mdl-card__media">
               <img src="images/more-from-2.png">
             </div>
@@ -417,7 +395,7 @@
             </div>
           </div> -->
 
-    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+      <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
             <div class="mdl-card__media">
               <img src="images/more-from-3.png">
             </div>
@@ -436,7 +414,7 @@
               </a>
             </div>
           </div> -->
-  </div>
+    </div>
   </div>
 
   <!-- <footer class="android-footer mdl-mega-footer">
@@ -550,7 +528,7 @@
     }
 
     $(function () {
-      if ($('.iconBox').css('opacity') == 1) {
+      if ($('#num').css('opacity') == 1) {
         alert("Connect");
         counting();
       }
@@ -586,6 +564,18 @@
     }
 
 
+  </script>
+
+  <!-- slider -->
+  <script type="text/javascript">
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 3) {
+        counter = 1;
+      }
+    }, 5000);
   </script>
 
 </body>
