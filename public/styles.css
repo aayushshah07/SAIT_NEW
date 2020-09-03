@@ -21,24 +21,17 @@
     opacity: 1;
   }
 } */
-/* html{
-  scroll-behavior: smooth;
-} */
-
 body {
   margin: 0;
- overflow-x: hidden;
+ overflow: hidden;
  color: #d9d9d9;
 }
-
-
 
 .fade-in
 {
   opacity: 0;
   transition: opacity 350ms ease-in;
 }
-
 .appear
 {
   opacity: 1;
@@ -63,6 +56,64 @@ body {
   transform: translateX(0);
   opacity: 1;
 }
+
+/* cards section */
+.card-main
+{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow:hidden;
+  background: black;
+  padding: 0;
+}
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 15px;
+  grid-template-areas: "image" "text";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.card-text
+{
+  grid-area: text;
+  margin: 20px;
+}
+.card-text h2
+{
+  padding-top: 0px;
+}
+
+.card-image
+{
+  grid-area: image;
+  background: url('images/back.jpeg');
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  align-items: center;
+  background-size: cover;
+}
+
+.card:hover
+{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* .card-stats
+{
+  grid-area: stats;
+} */
+
 
 a img{
   border: 0px;
@@ -158,76 +209,7 @@ a img{
       font-size:40px;
       padding-top: 15px;
   }
-  /* .maindiv
-  {
-      background: #00bfa5;
-      width: 70%;
-      height: 400px;
-      position: absolute; 
-      left: 50%;
-      top:50%;
-      transform: translate(-50%, -50%);
-      background-image: url('https://images.unsplash.com/photo-1564574662330-73fb2940ff5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
-      background-size: 100% 100%;
-      box-shadow: 1px 2px 10px 3px white;
-      animation : slider 9s infinite linear;
-  } */
-  /* .slider{
-    width:100%;
-    height: 500px;
-    position: relative;
-    padding-top: 50px;
-    transition-delay: 1ms;
-  }
-  .image{
-    width:100%;
-    height:500px;
-    animation: smooth 2.5s linear;
-    transition-duration: 300ms;
-    padding: 10px 10px;
-  }
-  .image img{
-    width:100%;
-    height:400px;
-  }
-  .left, .right{
-    position:absolute;
-    font-size: 40px;
-    top:50%;
-    color:white;
-    background-color:transparent ;
-    transition:3s;
-    padding:4px;
-    display:none;
-    border-radius: 50%;
-
-  }
-  .right{
-    right:0;
-  }
-  .left:hover, .right:hover{
-    cursor:pointer;
-    font-size: 42px;
-    top:50%;
-    bottom: 50%;
-    color:greenyellow;
-     
-  }
-  .slider:hover > .left, .slider:hover > .right{
-    display:block;
-  }
-
-  @keyframes smooth {
-    from{
-      transform: scale(1);
-      transform: translateX(100%);
-      opacity:0.8;
-    }
-    to{
-      transform: scale(1); 
-      opacity: 1;
-    }
-  } */
+  
 
   .slider{
     width: 800px;
@@ -448,6 +430,7 @@ a img{
     line-height: 68px;
     background-color: transparent !important;
     border-bottom: 4px solid transparent;
+    text-decoration: none;
   }
 
     .android-navigation .mdl-navigation__link:hover {
@@ -505,7 +488,6 @@ a img{
   background-color: black;
   /* background: url('images/slide01.jpg') center 30% no-repeat; */
   background-size: cover;
- 
 }
 
 .logo-font {
@@ -563,7 +545,12 @@ a img{
   }
 
 .android-screen-section {
-  position: relative;
+  /* display: flex; */
+  /* display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow:hidden;*/
+  position: relative; 
    padding-top: 30px;
   padding-bottom: 20px;
   background: black;
@@ -1018,6 +1005,19 @@ a img{
   {
     align-content: center;
     padding-right: 420px;
+  }
+  .card-main
+  {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:auto;
+    align-self: center;
+    padding: 10px;
+  }
+  .card
+  {
+    grid-template-columns: 300px;
   }
   
 }
